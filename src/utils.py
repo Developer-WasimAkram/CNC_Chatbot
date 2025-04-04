@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import PyPDFLoader,DirectoryLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+#from langchain_openai import OpenAIEmbeddings
 
 from dotenv import load_dotenv
 import os
