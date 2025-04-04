@@ -8,7 +8,7 @@ import os
 
 
 load_dotenv()
-os.environ['OPENAI_API_KEY']=os.getenv('OPENAI_API_KEY')
+#os.environ['OPENAI_API_KEY']=os.getenv('OPENAI_API_KEY')
 
 def load_pdf_files(data):
     loader=DirectoryLoader(data,glob="*.pdf",loader_cls=PyPDFLoader)
@@ -25,6 +25,6 @@ def text_split(documents):
 #Download embedding from huggingface
 
 def download_hugging_face_embedding():
-    #embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-    embeddings=OpenAIEmbeddings()
+    embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    #embeddings=OpenAIEmbeddings()
     return embeddings
